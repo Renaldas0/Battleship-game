@@ -9,6 +9,9 @@ class GameBoard:
         self.board = board
 
     def convert_letters_to_nums():
+        """
+        Function to convert letters to numbers for the columns
+        """
         letters_to_nums = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4}
         return letters_to_nums
 
@@ -64,7 +67,7 @@ def StartGame():
     computers_board = GameBoard([[" "] * 5 for i in range(5)])
     players_board = GameBoard([[" "] * 5 for i in range(5)])
     Battleships.create_ships(computers_board)
-    #start 10 guess counter
+    # start 10 guess counter
     turns = 10
     while turns > 0:
         GameBoard.print_board(players_board)
