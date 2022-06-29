@@ -52,9 +52,43 @@ class Battleships():
             return self.get_player_input()
 
     def count_sunk_ships(self):
+        """Track the number of ships that have been hit and sunk"""
         sunk_ships = 0
         for row in self.board:
             for column in row:
                 if column == "X":
                     sunk_ships += 1
         return sunk_ships
+
+def StartGame():
+    computers_board = GameBoard([[" "] * 5 for i in range(5)])
+    players_board = GameBoard([[" "] * 5 for i in range(5)])
+    Battleships.create_ships(computers_board)
+    #start 10 guess counter
+    turns = 10
+    while turns > 0:
+        GameBoard.print_board(players_board)
+        #get player input
+        player_x_row, player_y_column = Battleships.get_player_input(object)
+        #check if value was already guessed
+        while players_board.board[player_x_row][player_y_column] == "-" or players_board.board[player_x_row][player_y_column] == "X":
+            print("You already guessed here")
+            player_x_row, player_y_column = Battleships.get_player_input(object)
+        #check if a ship is hit or missed
+        if computers_board.board[player_x_row][player_y_column] == "X":
+            print('You sunk and enemy battleship!')
+            players_board.board[player_x_row][player_y_column] = "X"
+        else: 
+            print('You missed my battleship!')
+            players_board.board[player_x_row][player_y_column] = "-"
+        #check if you have won or lost
+        if Battleships.count_sunk_ships(players_board) == 4:
+            print('You have destroyed all my battleships!')
+            break
+        else:
+            turns -= 1
+            print(f"You have {turns} turns remaining!")
+            if turns == 0:
+                print('You ran out of ammo to shoot')
+                GameBoard.print_board(players_board)
+                break
