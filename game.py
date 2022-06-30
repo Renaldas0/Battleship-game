@@ -1,10 +1,10 @@
 import random
 
+
 class GameBoard:
     """
     The GameBoard class is used to create the playing board
     """
-
     def __init__(self, board):
         self.board = board
 
@@ -16,6 +16,10 @@ class GameBoard:
         return letters_to_nums
 
     def print_board(self):
+        """
+        Function creating the layout of the board, sets 1-5,A-E 
+        and the divider that also acts as a guide to columns.
+        """
         print("  A B C D E")
         print("  +-+-+-+-+")
         row_number = 1
@@ -23,21 +27,28 @@ class GameBoard:
             print("%d|%s|" % (row_number, "|".join(row)))
             row_number += 1
 
+
 class Battleships():
     def __init__(self, board):
         self.board = board
 
     def create_ships(self):
+        """
+        Function that creates the ships on computers board and
+        sets them to random locations between
+        index 0 and 4.
+        """
         for i in range(4):
             self.x_row, self.y_column = random.randint(0, 4), random.randint(0, 4)
             while self.board[self.x_row][self.y_column] == 'X':
-                self.x_row, self.y_column = random.randint(0, 4), random.randint(0, 4)
+                self.x_row, self.y_column = random.randint(0, 4),
+                random.randint(0, 4)
             self.board[self.x_row][self.y_column] = "X"
         return self.board
 
     def get_player_input(self):
         """ Function to validate user input, row must be a number
-         between 1 and 5, column must be a letter between A and E according to 
+         between 1 and 5, column must be a letter between A and E according to
          English Alphabetical order"""
         try:
             x_row = input("Guess the row of enemy ship: ")
@@ -63,28 +74,35 @@ class Battleships():
                     sunk_ships += 1
         return sunk_ships
 
+
 def StartGame():
+    """
+    Main function that runs the game, controls turn countdown,
+    checks if guess is valid or has already been guessed there and
+    marks down where an area was guessed.
+    """
     computers_board = GameBoard([[" "] * 5 for i in range(5)])
     players_board = GameBoard([[" "] * 5 for i in range(5)])
     Battleships.create_ships(computers_board)
+
     # start 10 guess counter
     turns = 10
     while turns > 0:
         GameBoard.print_board(players_board)
-        #get player input
+        # get player input
         player_x_row, player_y_column = Battleships.get_player_input(object)
-        #check if value was already guessed
+        # check if value was already guessed
         while players_board.board[player_x_row][player_y_column] == "-" or players_board.board[player_x_row][player_y_column] == "X":
             print("You already guessed here")
             player_x_row, player_y_column = Battleships.get_player_input(object)
-        #check if a ship is hit or missed
+        # check if a ship is hit or missed
         if computers_board.board[player_x_row][player_y_column] == "X":
             print('You sunk and enemy battleship!')
             players_board.board[player_x_row][player_y_column] = "X"
-        else: 
+        else:
             print('You missed my battleship!')
             players_board.board[player_x_row][player_y_column] = "-"
-        #check if you have won or lost
+        # check if you have won or lost
         if Battleships.count_sunk_ships(players_board) == 4:
             print('You have destroyed all my battleships!')
             break
