@@ -50,15 +50,15 @@ class Battleships():
          between 1 and 5, column must be a letter between A and E according to
          English Alphabetical order"""
         try:
-            x_row = input("Guess the row of enemy ship: ")
+            x_row = input("Guess the row of enemy ship 1-5:\n")
             while x_row not in '12345':
                 print('Please select a value between 1 and 5')
-                x_row = input("Guess the row of enemy ship: ")
+                x_row = input("Guess the row of enemy ship 1-5:\n ")
 
-            y_column = input('Guess the column letter of enemy ship: ').upper()
+            y_column = input('Guess the column letter of enemy ship A-E:\n ').upper()
             while y_column not in 'ABCDE':
                 print('Please select a value between A,B,C,D,E')
-                y_column = input('Guess the column letter of enemy ship: ').upper()
+                y_column = input('Guess the column letter of enemy ship A-E:\n ').upper()
             return int(x_row) - 1, GameBoard.convert_letters_to_nums()[y_column]
         except ValueError and KeyError:
             print('Not a valid input')
@@ -96,10 +96,10 @@ def StartGame():
             player_x_row, player_y_column = Battleships.get_player_input(object)
         # check if a ship is hit or missed
         if computers_board.board[player_x_row][player_y_column] == "X":
-            print('You sunk and enemy battleship!')
+            print('You sunk and enemy battleship!\n')
             players_board.board[player_x_row][player_y_column] = "X"
         else:
-            print('You missed my battleship!')
+            print('You missed my battleship!\n')
             players_board.board[player_x_row][player_y_column] = "-"
         # check if you have won or lost
         if Battleships.count_sunk_ships(players_board) == 4:
@@ -112,6 +112,15 @@ def StartGame():
                 print('You ran out of ammo to shoot')
                 GameBoard.print_board(players_board)
                 break
+
+print('Welcome to Battleships!!')
+print('-' * 25)
+print('You have 10 guesses to destroy enemy ships')
+print('Press enter twice to exit the game')
+print('Row ranges from 1 - 5')
+print('Column ranges from A to E')
+print('-' * 25)
+
 
 if __name__ == '__main__':
     StartGame()
