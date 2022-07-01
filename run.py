@@ -17,7 +17,7 @@ class GameBoard:
 
     def print_board(self):
         """
-        Function creating the layout of the board, sets 1-5,A-E 
+        Function creating the layout of the board, sets 1-5,A-E
         and the divider that also acts as a guide to columns.
         """
         print("  A B C D E")
@@ -41,8 +41,7 @@ class Battleships():
         for i in range(4):
             self.x_row, self.y_column = random.randint(0, 4), random.randint(0, 4)
             while self.board[self.x_row][self.y_column] == 'X':
-                self.x_row, self.y_column = random.randint(0, 4),
-                random.randint(0, 4)
+                self.x_row, self.y_column = random.randint(0, 4), random.randint(0, 4)
             self.board[self.x_row][self.y_column] = "X"
         return self.board
 
