@@ -1,8 +1,5 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome Renaldas Bendikas,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Welcome to my Battleships game 
+Coded entirely on python and you will need pycharm to run this or any other editor that allows for python.
 
 ## Reminders
 
