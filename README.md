@@ -1,11 +1,11 @@
-Welcome to my Battleships game 
-Coded entirely on python and you will need pycharm to run this or any other editor that allows for python.
+# Welcome to my Battleships game 
+This game is a single player game against AI and is Coded entirely on python. Instructions on how to play are given once the game is run.
 
-## Reminders
+## Requirements
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+- You will be required to have an editor that can run python code to play this game
+- A recommendation I have is PyCharm 
+- Link to download PyCharm can be found here : https://www.jetbrains.com/pycharm/download/#section=windows
 
 ## Creating the Heroku app
 
