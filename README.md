@@ -22,14 +22,25 @@ This game is a single player game against AI and is Coded entirely on python. In
 - The following error occurs for an incorrect input value
 - ![incorrect-input](https://user-images.githubusercontent.com/97538312/177016836-1e56e5e7-a773-429f-a6cb-f97e97febb7e.jpg)
 
+- If coordinates have already been guessed then the following error will show :
+- ![already-guessed](https://user-images.githubusercontent.com/97538312/177017306-8008e8e3-fa97-4cd4-aed2-c4c5232506ce.jpg)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- When a ship has been hit the message will display and an X will appear in that location 
+- ![hit-ship](https://user-images.githubusercontent.com/97538312/177017317-b4bd8dd8-a7a7-4b7b-a2eb-3974c7a530d7.jpg)
+
+- If a ship is missed a message will alert the player and the coordinate is marked with '-'
+- ![missed-ship](https://user-images.githubusercontent.com/97538312/177017327-242b8e64-6757-4286-bfc6-312d13a181df.jpg)
+
+
 
 
 ## Unfixed Bugs
-## Debugging
+- There are no unfixed bugs in the code
+
 ## Testing
+- For the testing process I used print statements and kept running the code after a new function was added which was noticeable when run
+- This allowed for me to efficiently pick out any issues in the code as it occured
+- 
 ## Deployment
 ## Credits
 
