@@ -110,6 +110,7 @@ def StartGame():
             print(f"You have {turns} turns remaining!")
             if turns == 0:
                 print('You ran out of ammo to shoot')
+                print('Run the game again to play again')
                 GameBoard.print_board(players_board)
                 break
 
