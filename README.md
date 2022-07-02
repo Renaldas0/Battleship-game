@@ -14,7 +14,7 @@ When you create the app, you will need to add two buildpacks from the _Settings_
 1. `heroku/python`
 2. `heroku/nodejs`
 
-## 
+## Features
 ## Unfixed Bugs
 ## Debugging
 ## Testing
