@@ -9,12 +9,24 @@ This game is a single player game against AI and is Coded entirely on python. In
 
 ## How the game works
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- This game can be started by either pressing the run button on python or by typing python3 run.py in the command terminal
+- Once the game is started , an introduction message is displayed which explains how to play.
+- ![run-game](https://user-images.githubusercontent.com/97538312/177016232-57b648ee-4794-4fc9-9648-61c3a27a2494.jpg)
+- The first input will be to guess a row and the only acceptable values for this are whole numbers from 1 to 5
+- The next input value will be to guess a column letter ranging from A to E 
+
+## Features
+- Any input value that is not an integer between 1 and 5 will throw an error for the row guess
+- Any input value that is not between letters A to E will throw an error for the column guess
+- If the user enters a lowercase letter, the code will still accept this by converting all input values to uppercase
+- The following error occurs for an incorrect input value
+- ![incorrect-input](https://user-images.githubusercontent.com/97538312/177016836-1e56e5e7-a773-429f-a6cb-f97e97febb7e.jpg)
+
 
 1. `heroku/python`
 2. `heroku/nodejs`
 
-## Features
+
 ## Unfixed Bugs
 ## Debugging
 ## Testing
