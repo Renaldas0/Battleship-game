@@ -103,7 +103,7 @@ def StartGame():
             players_board.board[player_x_row][player_y_column] = "-"
         # check if you have won or lost
         if Battleships.count_sunk_ships(players_board) == 4:
-            print('You have destroyed all my battleships!')
+            print('Congradulations, You have destroyed all enemy battleships!')
             break
         else:
             turns -= 1
