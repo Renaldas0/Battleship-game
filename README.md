@@ -1,21 +1,25 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Welcome to my Battleships game 
+This game is a single player game against AI and is Coded entirely on python. Instructions on how to play are given once the game is run.
 
-Welcome Renaldas Bendikas,
+## Requirements
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+- You will be required to have an editor that can run python code to play this game
+- A recommendation I have is PyCharm 
+- Link to download PyCharm can be found here : https://www.jetbrains.com/pycharm/download/#section=windows
 
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
+## How the game works
 
 When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
 1. `heroku/python`
 2. `heroku/nodejs`
+
+## Features
+## Unfixed Bugs
+## Debugging
+## Testing
+## Deployment
+## Credits
 
 You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
