@@ -42,17 +42,14 @@ This game is a single player game against AI and is Coded entirely on python. In
 - This allowed for me to efficiently pick out any issues in the code as it occured
 - 
 ## Deployment
+- The project is deployed to Heroku which is a cloud application platform , link : https://www.heroku.com
+- First I created a new app within my account on Heroku.com 
+ ![create_new_app](https://user-images.githubusercontent.com/97538312/177018312-f5f5d0fc-3fa9-4bf6-ab25-66f7f26c52d4.jpg)
+ 
+ - Then in the settings I added 2 buildpacks in order, Python and then nodejs since it is part of the template provided.
+ ![buildpack](https://user-images.githubusercontent.com/97538312/177018327-df74eafe-c0e3-4443-9ecb-fe68a783e9df.jpg)
+
+ - The project is pushed on github
+ 
 ## Credits
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
