@@ -40,7 +40,12 @@ This game is a single player game against AI and is Coded entirely on python. In
 ## Testing
 - For the testing process I used print statements and kept running the code after a new function was added which was noticeable when run
 - This allowed for me to efficiently pick out any issues in the code as it occured
-- 
+- I also put the code through PEP8 Online : http://pep8online.com/
+- In this there were a few minor issues that are about lines of code being too long.
+ ![pep8](https://user-images.githubusercontent.com/97538312/177018534-2c88db68-38be-48a0-a0af-33f88cfcdac5.jpg)
+
+ 
+ 
 ## Deployment
 - The project is deployed to Heroku which is a cloud application platform , link : https://www.heroku.com
 - First I created a new app within my account on Heroku.com 
@@ -49,7 +54,10 @@ This game is a single player game against AI and is Coded entirely on python. In
  - Then in the settings I added 2 buildpacks in order, Python and then nodejs since it is part of the template provided.
  ![buildpack](https://user-images.githubusercontent.com/97538312/177018327-df74eafe-c0e3-4443-9ecb-fe68a783e9df.jpg)
 
- - The project is pushed on github
+ - The code was deployed and pushed to GitHub 
  
 ## Credits
+
+ - I took inspiration for this project from the Code Institute video for Battleships
+ - Some solutions to methods I found on stackoverflow and by referring back to pevious lessons
 
