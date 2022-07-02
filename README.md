@@ -7,12 +7,19 @@ This game is a single player game against AI and is Coded entirely on python. In
 - A recommendation I have is PyCharm 
 - Link to download PyCharm can be found here : https://www.jetbrains.com/pycharm/download/#section=windows
 
-## Creating the Heroku app
+## How the game works
 
 When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
 1. `heroku/python`
 2. `heroku/nodejs`
+
+## 
+## Unfixed Bugs
+## Debugging
+## Testing
+## Deployment
+## Credits
 
 You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
